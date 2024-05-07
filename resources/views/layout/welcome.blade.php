@@ -81,6 +81,28 @@
                     @endforeach
                 </div>
         </section>
+
+        <section class="digital_comics text-white ">
+            <div class="container">
+                <ul class="list-uns">
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/cell.png') }}" alt=""> DIGITAL COMICS
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/sweater.png') }}" alt="">DC MERCHANDISE
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/sub.png') }}" alt=""> SUBSCRIPTION
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/position.png') }}" alt="">COMIC SHOP LOCATOR
+                    </li>
+                    <li>
+                        <img src="{{ Vite::asset('resources/img/buy.svg') }}" alt="">PC POWER VISA
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer>
