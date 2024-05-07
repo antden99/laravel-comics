@@ -14,45 +14,48 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.welcome'); //essendo che ho spostato la pagina di benvenuto nella cartella layout presente in view devo mettere layout . "nome inizio cartella"
+
+    $arrayList = config('db.product');
+    
+    return view('layout.welcome', compact('arrayList')); //essendo che ho spostato la pagina di benvenuto nella cartella layout presente in view devo mettere layout . "nome inizio cartella"
 })->name('home');
 
 Route::get('characters', function () {
-    return view('characters'); 
+    return view('characters');
 })->name('characters');
 
 Route::get('movies', function () {
-    return view('movies'); 
+    return view('movies');
 })->name('movies');
 
 Route::get('tv', function () {
-    return view('tv'); 
+    return view('tv');
 })->name('tv');
 
 Route::get('comics', function () {
-    return view('comics'); 
+    return view('comics');
 })->name('comics');
 
 Route::get('games', function () {
-    return view('games'); 
+    return view('games');
 })->name('games');
 
 Route::get('collectibles', function () {
-    return view('collectibles'); 
+    return view('collectibles');
 })->name('collectibles');
 
 Route::get('videos', function () {
-    return view('videos'); 
+    return view('videos');
 })->name('videos');
 
 Route::get('fans', function () {
-    return view('fans'); 
+    return view('fans');
 })->name('fans');
 
 Route::get('news', function () {
-    return view('news'); 
+    return view('news');
 })->name('news');
 
 Route::get('shop', function () {
-    return view('shop'); 
+    return view('shop');
 })->name('shop');

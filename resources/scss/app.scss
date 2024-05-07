@@ -1,7 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-main{
-    height: 50vh;
-    background-color: red;
+
+
+.active_nav{
+    background-color: #0282f9;
+}
+
+.jumbo{
+   background-image: url(../img/jumbotron.jpg);
+   background-size: cover;
+   height: 400px;
 }
