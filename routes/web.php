@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $arrayList = config('db.product');
-    
-    return view('layout.welcome', compact('arrayList')); //essendo che ho spostato la pagina di benvenuto nella cartella layout presente in view devo mettere layout . "nome inizio cartella"
+
+    return view('home', compact('arrayList')); //essendo che ho spostato la pagina di benvenuto nella cartella layout presente in view devo mettere layout . "nome inizio cartella"
+
 })->name('home'); //route('home') questa funzione mi crea l'URL per arrivare a questa rotta
 
 Route::get('characters', function () {
