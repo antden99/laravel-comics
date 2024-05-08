@@ -1,44 +1,99 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-
-
-
-.active_nav{
+.active_nav {
     background-color: #0282f9;
 }
 
-.jumbo{
-   background-image: url(../img/jumbotron.jpg);
-   background-size: cover;
-   height: 400px;
+.jumbo {
+    background-image: url(../img/jumbotron.jpg);
+    background-size: cover;
+    height: 400px;
 }
 
 ///////PARZIALE CARD HOME
+
+.current_series {
+    background-color: #1c1c1c;
+}
+
 .card {
     height: 100%;
     border: none;
 }
 .card-img-top {
-    height: 200px; 
-    object-fit: cover; 
+    height: 200px;
+    object-fit: cover;
 }
 .card-body {
-    height: 100px; 
+    height: 100px;
 }
 
 //////////////////////////
 
-
 //////////PARZIALE DIGITAL
 
-
-.digital_comics{
+.digital_comics {
     background-color: #0282f9;
 
-     img {
-        width: 100px; 
-        height: 100px; 
+    img {
+        width: 100px;
+        height: 100px;
     }
 }
 
 ////////////////////////
+
+footer {
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover;
+    height: 400px;
+
+    & .footer_top {
+        overflow: hidden;
+        height: 100%;
+    }
+    & .footer_left {
+        width: 50%;
+
+        ul {
+            list-style: none;
+            gap: 30px;
+
+            li {
+                .title {
+                    font-size: 20px;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: #54504b;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    & .footer_right {
+        width: 50%;
+        height: 100%;
+
+        img {
+            margin-top: -70px;
+        }
+    }
+
+    & .footer_bottom {
+        background-color: #303030;
+        height: 100px;
+    }
+
+    .color_link{
+        color: #54504b;
+    }
+
+    .colort_text_footer{
+        color:  #0282f9;
+    }
+}
