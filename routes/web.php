@@ -15,11 +15,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $arrayList = config('db.product');
+    $arrayComics = config('db.comics');
 
-    return view('home', compact('arrayList')); //essendo che ho spostato la pagina di benvenuto nella cartella layout presente in view devo mettere layout . "nome inizio cartella"
+    return view('home', compact('arrayComics')); //essendo che ho spostato la pagina di benvenuto nella cartella layout presente in view devo mettere layout . "nome inizio cartella" vedi lezione 7/05/24
 
 })->name('home'); //route('home') questa funzione mi crea l'URL per arrivare a questa rotta
+
+
+Route::get('/comics/{id}', function ($id) {
+
+    abort_unless(($id >= 0) && ($id < count(config('db.comics'))), 404); //abort_unless viene utilizzato per controllare il primo parametro e nel caso non è verificato allora invia un eccezione che genera un error 404(non trovato)
+
+    $comic = config('db.comics')[$id];
+
+    return view('singleComic', compact('comic'));
+})->name('comic');
+
+
+
 
 Route::get('characters', function () {
     return view('characters');

@@ -9,19 +9,26 @@
         <section class="current_series">
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-6 g-4">
-                    @foreach ($arrayList as $array)
+
+                    @foreach ($arrayComics as $index => $array)
                         <div class="col">
-                            <div class="card border-0">
-                                <img class="card-img-top" src="{{ $array['thumb'] }}"
-                                    alt="image describing the following array {{ $array['title'] }}">
-                                <div class="card-body">
-                                    {{ $array['title'] }}
+
+                            <a href="{{route('comic',$index)}}">
+                                <div class="card border-0">
+                                    <img class="card-img-top" src="{{ $array['thumb'] }}"
+                                        alt="image describing the following array {{ $array['title'] }}">
+                                    <div class="card-body">
+                                        {{ $array['title'] }}
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
+
                         </div>
                     @endforeach
+
                 </div>
-                <div class="text-center p-4"><button type="button" class="btn btn-primary text-white">LOAD MORE</button></div>
+                <div class="text-center p-4"><button type="button" class="btn btn-primary text-white">LOAD MORE</button>
+                </div>
         </section>
 
         <section class="digital_comics text-white ">
